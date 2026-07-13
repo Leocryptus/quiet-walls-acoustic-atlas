@@ -1,0 +1,2917 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Тихие Стены — Акустический атлас</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;max-width:736px;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+</head>
+<body>
+<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Тихие Стены — Акустический атлас" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Тихие Стены — Акустический атлас&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(--background) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: light-dark(rgb(255 255 255), rgb(24 24 24));
+  --foreground: light-dark(rgb(26 28 31), rgb(255 255 255));
+  --card: color-mix(in oklab, var(--foreground) 5%, transparent);
+  --card-foreground: var(--foreground);
+  --popover: light-dark(rgb(255 255 255), rgb(45 45 45));
+  --popover-foreground: var(--foreground);
+  --primary: light-dark(rgb(51 156 255), rgb(131 195 255));
+  --primary-foreground: light-dark(rgb(255 255 255), rgb(13 13 13));
+  --secondary: light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%));
+  --secondary-foreground: var(--foreground);
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: light-dark(
+    rgb(26 28 31 / 49.4%),
+    rgb(255 255 255 / 49.8%)
+  );
+  --accent: light-dark(rgb(229 242 255), rgb(13 39 63));
+  --accent-foreground: var(--primary);
+  --destructive: light-dark(rgb(226 85 7), rgb(255 133 73));
+  --border: light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%));
+  --input: light-dark(
+    rgb(26 28 31 / 11.8%),
+    color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+  );
+  --ring: light-dark(rgb(51 156 255), rgb(131 195 255 / 76%));
+  --font-size-base: 14px;
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --radius: 12.5px;
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+  --color-background-primary: var(--background);
+  --color-text-primary: var(--foreground);
+  --color-border-secondary: var(--border);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  margin: 0;
+  padding: 5px;
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--viz-font-weight-medium);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: superellipse(1.5);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: superellipse(1.5);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+    [aria-pressed=&quot;true&quot;],
+    [aria-selected=&quot;true&quot;],
+    .is-selected
+  ) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;acoustic-atlas&quot; data-view=&quot;0&quot;&gt;
+  &lt;style&gt;
+    @import url(&quot;https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Manrope:wght@400;500&amp;display=swap&quot;);
+
+    #acoustic-atlas {
+      --atlas-paper: rgb(241 237 225);
+      --atlas-paper-deep: rgb(229 223 207);
+      --atlas-ink: rgb(21 57 45);
+      --atlas-text: rgb(41 45 39);
+      --atlas-muted: rgb(102 103 91);
+      --atlas-line: rgb(21 57 45 / 18%);
+      --atlas-line-strong: rgb(21 57 45 / 40%);
+      --atlas-green: rgb(22 71 53);
+      --atlas-lime: rgb(123 143 63);
+      --atlas-brass: rgb(153 112 45);
+      --atlas-wool: rgb(183 155 99);
+      --atlas-charcoal: rgb(58 58 51);
+      --atlas-shadow: rgb(65 56 37 / 14%);
+      --atlas-mono: &quot;IBM Plex Mono&quot;, ui-monospace, monospace;
+      --atlas-sans: &quot;Manrope&quot;, sans-serif;
+      position: relative;
+      width: 100%;
+      min-width: 0;
+      color: var(--atlas-text);
+      background:
+        linear-gradient(var(--atlas-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--atlas-line) 1px, transparent 1px),
+        radial-gradient(circle at 84% 12%, rgb(255 255 255 / 72%), transparent 32%),
+        var(--atlas-paper);
+      background-size: 24px 24px, 24px 24px, auto, auto;
+      border: 1px solid var(--atlas-line-strong);
+      box-shadow: 0 20px 60px var(--atlas-shadow);
+      font-family: var(--atlas-sans);
+      overflow: hidden;
+    }
+
+    #acoustic-atlas,
+    #acoustic-atlas * {
+      box-sizing: border-box;
+    }
+
+    #acoustic-atlas button,
+    #acoustic-atlas input {
+      font: inherit;
+    }
+
+    #acoustic-atlas .atlas-header {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 18px;
+      min-height: 58px;
+      padding: 0 18px;
+      border-bottom: 1px solid var(--atlas-line-strong);
+      background: rgb(241 237 225 / 90%);
+      backdrop-filter: blur(12px);
+    }
+
+    #acoustic-atlas .atlas-brand {
+      color: var(--atlas-ink);
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      white-space: nowrap;
+    }
+
+    #acoustic-atlas .atlas-mobile-chapter {
+      display: none;
+      color: var(--atlas-ink);
+      font-family: var(--atlas-mono);
+      font-size: 9px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    #acoustic-atlas .atlas-tabs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      min-width: 0;
+    }
+
+    #acoustic-atlas .atlas-tab,
+    #acoustic-atlas .atlas-rail-btn,
+    #acoustic-atlas .atlas-layer-btn,
+    #acoustic-atlas .atlas-step-btn,
+    #acoustic-atlas .atlas-icon-btn {
+      appearance: none;
+      border: 0;
+      color: var(--atlas-muted);
+      background: transparent;
+      cursor: pointer;
+    }
+
+    #acoustic-atlas .atlas-tab {
+      min-height: 34px;
+      padding: 0 8px;
+      border-bottom: 1px solid transparent;
+      font-family: var(--atlas-mono);
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    #acoustic-atlas .atlas-tab:hover,
+    #acoustic-atlas .atlas-tab[aria-pressed=&quot;true&quot;] {
+      color: var(--atlas-ink);
+      border-bottom-color: var(--atlas-ink);
+    }
+
+    #acoustic-atlas .atlas-tab:focus-visible,
+    #acoustic-atlas .atlas-rail-btn:focus-visible,
+    #acoustic-atlas .atlas-layer-btn:focus-visible,
+    #acoustic-atlas .atlas-step-btn:focus-visible,
+    #acoustic-atlas .atlas-icon-btn:focus-visible {
+      outline: 2px solid var(--atlas-lime);
+      outline-offset: 2px;
+    }
+
+    #acoustic-atlas .atlas-menu {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--atlas-ink);
+      font-family: var(--atlas-mono);
+      font-size: 10px;
+      white-space: nowrap;
+    }
+
+    #acoustic-atlas .atlas-menu-mark {
+      display: grid;
+      width: 22px;
+      gap: 3px;
+    }
+
+    #acoustic-atlas .atlas-menu-mark i {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: currentColor;
+    }
+
+    #acoustic-atlas .atlas-shell {
+      display: grid;
+      grid-template-columns: 48px minmax(0, 1fr);
+      min-width: 0;
+    }
+
+    #acoustic-atlas .atlas-rail {
+      display: grid;
+      align-content: start;
+      border-right: 1px solid var(--atlas-line-strong);
+    }
+
+    #acoustic-atlas .atlas-rail-btn {
+      position: relative;
+      min-height: 70px;
+      padding: 0;
+      border-bottom: 1px solid var(--atlas-line);
+      color: var(--atlas-muted);
+      font-family: var(--atlas-mono);
+      font-size: 11px;
+    }
+
+    #acoustic-atlas .atlas-rail-btn[aria-pressed=&quot;true&quot;] {
+      color: var(--atlas-paper);
+      background: var(--atlas-green);
+    }
+
+    #acoustic-atlas .atlas-rail-btn[aria-pressed=&quot;true&quot;]::before {
+      position: absolute;
+      top: 11px;
+      left: 50%;
+      width: 1px;
+      height: 12px;
+      background: var(--atlas-paper);
+      content: &quot;&quot;;
+    }
+
+    #acoustic-atlas .atlas-stage {
+      min-width: 0;
+    }
+
+    #acoustic-atlas .atlas-slide {
+      display: none;
+      min-width: 0;
+      animation: atlas-enter 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    #acoustic-atlas .atlas-slide.is-active {
+      display: block;
+    }
+
+    @keyframes atlas-enter {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #acoustic-atlas .atlas-hero {
+      display: grid;
+      grid-template-columns: minmax(150px, 0.72fr) minmax(320px, 1.55fr) minmax(112px, 0.53fr);
+      min-height: 420px;
+      border-bottom: 1px solid var(--atlas-line-strong);
+    }
+
+    #acoustic-atlas .atlas-intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 26px 14px 18px 18px;
+      border-right: 1px solid var(--atlas-line);
+    }
+
+    #acoustic-atlas .atlas-kicker,
+    #acoustic-atlas .atlas-code,
+    #acoustic-atlas .atlas-label,
+    #acoustic-atlas .atlas-status-line {
+      font-family: var(--atlas-mono);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    #acoustic-atlas .atlas-kicker {
+      color: var(--atlas-muted);
+      font-size: 10px;
+    }
+
+    #acoustic-atlas .atlas-title {
+      max-width: 190px;
+      margin-top: 10px;
+      color: var(--atlas-ink);
+      font-size: clamp(30px, 5.5vw, 52px);
+      font-weight: 500;
+      letter-spacing: -0.065em;
+      line-height: 0.96;
+    }
+
+    #acoustic-atlas .atlas-subtitle {
+      margin-top: 14px;
+      color: var(--atlas-muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    #acoustic-atlas .atlas-spec-list {
+      display: grid;
+      gap: 7px;
+      margin: 18px 0 0;
+      padding: 15px 0 0;
+      border-top: 1px solid var(--atlas-line);
+      list-style: none;
+    }
+
+    #acoustic-atlas .atlas-spec-list li {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 7px;
+      color: var(--atlas-muted);
+      font-family: var(--atlas-mono);
+      font-size: 9px;
+      line-height: 1.35;
+    }
+
+    #acoustic-atlas .atlas-spec-list strong {
+      color: var(--atlas-ink);
+      font-weight: 500;
+    }
+
+    #acoustic-atlas .atlas-model-wrap {
+      position: relative;
+      min-width: 0;
+      overflow: hidden;
+      background:
+        linear-gradient(var(--atlas-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--atlas-line) 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+
+    #acoustic-atlas .atlas-model-wrap::after {
+      position: absolute;
+      inset: auto 0 0;
+      height: 42%;
+      background: linear-gradient(transparent, rgb(222 215 196 / 54%));
+      content: &quot;&quot;;
+      pointer-events: none;
+    }
+
+    #acoustic-atlas #atlas-3d {
+      position: relative;
+      z-index: 2;
+      display: block;
+      width: 100%;
+      height: 340px;
+      cursor: grab;
+      touch-action: none;
+    }
+
+    #acoustic-atlas #atlas-3d:active {
+      cursor: grabbing;
+    }
+
+    #acoustic-atlas .atlas-model-fallback {
+      position: absolute;
+      z-index: 1;
+      inset: 44px 38px 80px;
+      perspective: 900px;
+      pointer-events: none;
+    }
+
+    #acoustic-atlas .atlas-model-fallback i {
+      position: absolute;
+      top: 24px;
+      left: calc(50% - 70px);
+      width: 140px;
+      height: 220px;
+      border: 1px solid var(--atlas-line-strong);
+      background: var(--fallback-color);
+      box-shadow: 8px 10px 22px var(--atlas-shadow);
+      transform: translateX(var(--fallback-x)) rotateY(-54deg) rotateX(3deg);
+    }
+
+    #acoustic-atlas .model-ready .atlas-model-fallback {
+      display: none;
+    }
+
+    #acoustic-atlas .atlas-model-code {
+      position: absolute;
+      z-index: 3;
+      top: 14px;
+      left: 14px;
+      color: var(--atlas-ink);
+      font-family: var(--atlas-mono);
+      font-size: 9px;
+    }
+
+    #acoustic-atlas .atlas-model-hint {
+      position: absolute;
+      z-index: 3;
+      right: 14px;
+      bottom: 68px;
+      color: var(--atlas-muted);
+      font-family: var(--atlas-mono);
+      font-size: 9px;
+      text-transform: uppercase;
+    }
+
+    #acoustic-atlas .atlas-explosion {
+      position: absolute;
+      z-index: 4;
+      right: 14px;
+      bottom: 18px;
+      left: 14px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 10px;
+      padding-top: 12px;
+      border-top: 1px solid var(--atlas-line-strong);
+      color: var(--atlas-muted);
+      font-family: var(--atlas-mono);
+      font-size: 9px;
+      text-transform: uppercase;
+    }
+
+    #acoustic-atlas .atlas-range {
+      width: 100%;
+      accent-color: var(--atlas-green);
+    }
+
+    #acoustic-atlas .atlas-metrics {
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      padding: 22px 12px 16px;
+      border-left: 1px solid var(--atlas-line);
+    }
+
+    #acoustic-atlas .atlas-metric {
+      padding: 0 0 16px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--atlas-line);
+    }
+
+    #acoustic-atlas .atlas-metric:last-of-type {
+      margin-bottom: 0;
+    }
+
+    #acoustic-atlas .atlas-label {
+      color: var(--atlas-muted);
+      font-size: 8px;
+    }
+
+    #acoustic-atlas .atlas-value {
+      margin-top: 5px;
+      color: var(--atlas-ink);
+      font-family: var(--atlas-mono);
+      font-size: 25px;
+      letter-spacing: -0.06em;
+      line-height: 1;
+    }
+
+    #acoustic-atlas .atlas-value.is-pending {
+      color: var(--atlas-brass);
+    }
+
+    #acoustic-atlas .atlas-metric small {
+      display: block;
+      margin-top: 5px;
+      color: var(--atlas-muted);
+      font-size: 9px;
+      line-height: 1.35;
+    }
+
+    #acoustic-atlas .atlas-status {
+      display: grid;
+      align-content: end;
+      gap: 7px;
+    }
+
+    #acoustic-atlas .atlas-status-line {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--atlas-muted);
+      font-size: 8px;
+    }
+
+    #acoustic-atlas .atlas-status-line i {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--status-color);
+    }
+
+    #acoustic-atlas .atlas-brass-control {
+      position: relative;
+      width: 54px;
+      height: 54px;
+      justify-self: end;
+      border: 1px solid rgb(88 59 20 / 35%);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 36% 34%, rgb(255 231 169), transparent 18%),
+        conic-gradient(
+          from 12deg,
+          rgb(205 165 88),
+          rgb(111 70 24),
+          rgb(229 192 112),
+          rgb(114 74 28),
+          rgb(205 165 88)
+        );
+      box-shadow:
+        inset 0 0 0 4px rgb(255 255 255 / 18%),
+        0 8px 18px rgb(75 49 15 / 22%);
+    }
+
+    #acoustic-atlas .atlas-brass-control::after {
+      position: absolute;
+      inset: 17px;
+      border-radius: 50%;
+      background: rgb(91 58 22 / 76%);
+      content: &quot;&quot;;
+    }
+
+    #acoustic-atlas .atlas-drawings {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.12fr;
+      border-bottom: 1px solid var(--atlas-line-strong);
+    }
+
+    #acoustic-atlas .atlas-drawing {
+      min-width: 0;
+      padding: 12px;
+      border-right: 1px solid var(--atlas-line);
+    }
+
+    #acoustic-atlas .atlas-drawing:last-child {
+      border-right: 0;
+    }
+
+    #acoustic-atlas .atlas-drawing-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+      color: var(--atlas-ink);
+      font-family: var(--atlas-mono);
+      font-size: 9px;
+      text-transform: uppercase;
+    }
+
+    #acoustic-atlas .atlas-drawing-head span:last-child {
+      color: var(--atlas-muted);
+    }
+
+    #acoustic-atlas .atlas-blueprint {
+      width: 100%;
+      height: 144px;
+      color: var(--atlas-ink);
+    }
+
+    #acoustic-atlas .atlas-blueprint .thin {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 0.8;
+      opacity: 0.52;
+    }
+
+    #acoustic-atlas .atlas-blueprint .strong {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.3;
+    }
+
+    #acoustic-atlas .atlas-blueprint .ghost {
+      fill: none;
+      stroke: currentColor;
+      stroke-dasharray: 3 3;
+      stroke-width: 0.7;
+      opacity: 0.35;
+    }
+
+    #acoustic-atlas .atlas-blueprint text {
+      fill: currentColor;
+      font-family: var(--atlas-mono);
+      font-size: 6px;
+    }
+
+    #acoustic-atlas .atlas-band {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 66px;
+      min-height: 92px;
+      border-bottom: 1px solid var(--atlas-line-strong);
+    }
+
+    #acoustic-atlas .atlas-band-metric {
+      display: grid;
+      align-content: center;
+      gap: 4px;
+      padding: 12px 18px;
+      border-right: 1px solid var(--atlas-line);
+    }
+
+    #acoustic-atlas .atlas-band-metric .atlas-value {
+      font-size: 25px;
+    }
+
+    #acoustic-atlas .atlas-band-metric small {
+      color: var(--atlas-muted);
+      font-size: 9px;
+    }
+
+    #acoustic-atlas .atlas-band-mark {
+      display: grid;
+      place-items: center;
+      color: var(--atlas-paper);
+      background: var(--atlas-green);
+      font-family: var(--atlas-mono);
+      font-size: 18px;
+    }
+
+    #acoustic-atlas .atlas-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.2fr;
+    }
+
+    #acoustic-atlas .atlas-detail {
+      min-width: 0;
+      padding: 14px;
+      border-right: 1px solid var(--atlas-line);
+    }
+
+    #acoustic-atlas .atlas-detail:last-child {
+      border-right: 0;
+    }
+
+    #acoustic-atlas .atlas-material-stack {
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      gap: 6px;
+      min-height: 130px;
+      perspective: 600px;
+    }
+
+    #acoustic-atlas .atlas-material-stack i {
+      display: block;
+      width: 34px;
+      height: var(--sample-h);
+      border: 1px solid var(--atlas-line-strong);
+      background: var(--sample-bg);
+      box-shadow: 5px 7px 12px var(--atlas-shadow);
+      transform: rotateY(-16deg) translateY(var(--sample-y));
+    }
+
+    #acoustic-atlas .atlas-spectrum {
+      width: 100%;
+      height: 130px;
+      color: var(--atlas-ink);
+    }
+
+    #acoustic-atlas .atlas-spectrum text {
+      fill: currentColor;
+      font-family: var(--atlas-mono);
+      font-size: 6px;
+    }
+
+    #acoustic-atlas .atlas-spectrum .grid {
+      stroke: currentColor;
+      stroke-width: 0.6;
+      opacity: 0.18;
+    }
+
+    #acoustic-atlas .atlas-spectrum .base-line {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.4;
+    }
+
+    #acoustic-atlas .atlas-spectrum .hypothesis-line {
+      fill: none;
+      stroke: var(--atlas-brass);
+      stroke-width: 1.4;
+      stroke-dasharray: 4 3;
+    }
+
+    #acoustic-atlas .atlas-section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+      gap: 18px;
+      padding: 26px 22px 18px;
+      border-bottom: 1px solid var(--atlas-line-strong);
+    }
+
+    #acoustic-atlas .atlas-section-title {
+      max-width: 580px;
+      margin-top: 7px;
+      color: var(--atlas-ink);
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 500;
+      letter-spacing: -0.06em;
+      line-height: 1;
+    }
+
+    #acoustic-atlas .atlas-section-copy {
+      max-width: 290px;
+      color: var(--atlas-muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    #acoustic-atlas .atlas-theory {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      min-height: 420px;
+    }
+
+    #acoustic-atlas .atlas-steps {
+      display: grid;
+      align-content: start;
+      border-right: 1px solid var(--atlas-line-strong);
+    }
+
+    #acoustic-atlas .atlas-step-btn {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 8px;
+      min-height: 68px;
+      padding: 12px;
+      border-bottom: 1px solid var(--atlas-line);
+      text-align: left;
+    }
+
+    #acoustic-atlas .atlas-step-btn span:first-child {
+      color: var(--atlas-lime);
+      font-family: var(--atlas-mono);
+      font-size: 10px;
+    }
+
+    #acoustic-atlas .atlas-step-btn span:last-child {
+      color: var(--atlas-muted);
+      font-size: 11px;
+      line-height: 1.35;
+    }
+
+    #acoustic-atlas .atlas-step-btn[aria-pressed=&quot;true&quot;] {
+      background: rgb(21 57 45 / 7%);
+    }
+
+    #acoustic-atlas .atlas-step-btn[aria-pressed=&quot;true&quot;] span:last-child {
+      color: var(--atlas-ink);
+    }
+
+    #acoustic-atlas .atlas-wave-lab {
+      position: relative;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      min-width: 0;
+      min-height: 420px;
+      padding: 18px;
+      overflow: hidden;
+    }
+
+    #acoustic-atlas .atlas-wave-stage {
+      position: relative;
+      min-height: 280px;
+      border-bottom: 1px solid var(--atlas-line-strong);
+    }
+
+    #acoustic-atlas .atlas-wave-svg {
+      width: 100%;
+      height: 280px;
+      color: var(--atlas-ink);
+    }
+
+    #acoustic-atlas .atlas-wave-svg .room {
+      fill: rgb(255 255 255 / 13%);
+      stroke: currentColor;
+      stroke-width: 1;
+      opacity: 0.65;
+    }
+
+    #acoustic-atlas .atlas-wave-svg .wall {
+      fill: var(--atlas-charcoal);
+      stroke: currentColor;
+      stroke-width: 0.8;
+    }
+
+    #acoustic-atlas .atlas-wave-svg .wave-in {
+      fill: none;
+      stroke: var(--atlas-green);
+      stroke-width: 1.4;
+    }
+
+    #acoustic-atlas .atlas-wave-svg .wave-out {
+      fill: none;
+      stroke: var(--atlas-brass);
+      stroke-width: 1.2;
+      opacity: var(--wave-opacity, 0.9);
+      transform: scaleX(var(--wave-scale, 1));
+      transform-origin: 330px 140px;
+      transition: opacity 300ms ease-out, transform 300ms ease-out;
+    }
+
+    #acoustic-atlas .atlas-wave-svg .membrane {
+      fill: var(--atlas-lime);
+      opacity: var(--membrane-opacity, 0);
+      transition: opacity 300ms ease-out;
+    }
+
+    #acoustic-atlas .atlas-wave-lab[data-step=&quot;3&quot;] {
+      --wave-opacity: 0.38;
+      --wave-scale: 0.45;
+      --membrane-opacity: 1;
+    }
+
+    #acoustic-atlas .atlas-wave-detail {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      padding-top: 16px;
+    }
+
+    #acoustic-atlas .atlas-wave-detail strong {
+      color: var(--atlas-ink);
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+    }
+
+    #acoustic-atlas .atlas-wave-detail p {
+      color: var(--atlas-muted);
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    #acoustic-atlas .atlas-construction {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(190px, 0.75fr);
+      min-height: 440px;
+    }
+
+    #acoustic-atlas .atlas-exploded-svg-wrap {
+      padding: 18px;
+      border-right: 1px solid var(--atlas-line-strong);
+    }
+
+    #acoustic-atlas .atlas-exploded-svg {
+      width: 100%;
+      height: 390px;
+      color: var(--atlas-ink);
+    }
+
+    #acoustic-atlas .atlas-exploded-svg .layer {
+      transition: opacity 220ms ease-out, transform 220ms ease-out;
+      transform-origin: center;
+    }
+
+    #acoustic-atlas .atlas-exploded-svg[data-focus]:not([data-focus=&quot;all&quot;]) .layer {
+      opacity: 0.14;
+    }
+
+    #acoustic-atlas .atlas-exploded-svg[data-focus=&quot;board&quot;] .layer-board,
+    #acoustic-atlas .atlas-exploded-svg[data-focus=&quot;membrane&quot;] .layer-membrane,
+    #acoustic-atlas .atlas-exploded-svg[data-focus=&quot;wool&quot;] .layer-wool,
+    #acoustic-atlas .atlas-exploded-svg[data-focus=&quot;frame&quot;] .layer-frame,
+    #acoustic-atlas .atlas-exploded-svg[data-focus=&quot;fabric&quot;] .layer-fabric {
+      opacity: 1;
+      transform: scale(1.025);
+    }
+
+    #acoustic-atlas .atlas-layer-panel {
+      display: grid;
+      align-content: start;
+    }
+
+    #acoustic-atlas .atlas-layer-btn {
+      display: grid;
+      grid-template-columns: 28px 1fr auto;
+      align-items: center;
+      gap: 8px;
+      min-height: 56px;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--atlas-line);
+      text-align: left;
+    }
+
+    #acoustic-atlas .atlas-layer-btn[aria-pressed=&quot;true&quot;] {
+      background: rgb(21 57 45 / 7%);
+    }
+
+    #acoustic-atlas .atlas-layer-number {
+      color: var(--atlas-lime);
+      font-family: var(--atlas-mono);
+      font-size: 9px;
+    }
+
+    #acoustic-atlas .atlas-layer-name {
+      color: var(--atlas-ink);
+      font-size: 11px;
+    }
+
+    #acoustic-atlas .atlas-layer-size {
+      color: var(--atlas-muted);
+      font-family: var(--atlas-mono);
+      font-size: 8px;
+    }
+
+    #acoustic-atlas .atlas-materials-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 230px;
+      min-height: 430px;
+    }
+
+    #acoustic-atlas .atlas-samples {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      padding: 18px;
+      border-right: 1px solid var(--atlas-line-strong);
+    }
+
+    #acoustic-atlas .atlas-sample {
+      position: relative;
+      min-height: 170px;
+      padding: 12px;
+      border: 1px solid var(--atlas-line);
+      overflow: hidden;
+    }
+
+    #acoustic-atlas .atlas-sample::before {
+      position: absolute;
+      inset: 42px 16px 16px;
+      border: 1px solid var(--atlas-line-strong);
+      background: var(--sample);
+      box-shadow: 8px 10px 20px var(--atlas-shadow);
+      content: &quot;&quot;;
+      transform: perspective(400px) rotateY(-11deg);
+    }
+
+    #acoustic-atlas .atlas-sample strong {
+      position: relative;
+      z-index: 1;
+      color: var(--atlas-ink);
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    #acoustic-atlas .atlas-material-analysis {
+      padding: 16px;
+    }
+
+    #acoustic-atlas .atlas-energy {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    #acoustic-atlas .atlas-energy-row {
+      display: grid;
+      gap: 5px;
+    }
+
+    #acoustic-atlas .atlas-energy-row span {
+      display: flex;
+      justify-content: space-between;
+      color: var(--atlas-muted);
+      font-family: var(--atlas-mono);
+      font-size: 9px;
+    }
+
+    #acoustic-atlas .atlas-energy-track {
+      height: 5px;
+      background: var(--atlas-line);
+    }
+
+    #acoustic-atlas .atlas-energy-track i {
+      display: block;
+      width: var(--energy);
+      height: 100%;
+      background: var(--atlas-green);
+    }
+
+    #acoustic-atlas .atlas-lab-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(210px, 0.7fr);
+      min-height: 440px;
+    }
+
+    #acoustic-atlas .atlas-lab-plan {
+      padding: 18px;
+      border-right: 1px solid var(--atlas-line-strong);
+    }
+
+    #acoustic-atlas .atlas-lab-svg {
+      width: 100%;
+      height: 330px;
+      color: var(--atlas-ink);
+    }
+
+    #acoustic-atlas .atlas-lab-svg .chamber {
+      fill: rgb(255 255 255 / 15%);
+      stroke: currentColor;
+      stroke-width: 1.2;
+    }
+
+    #acoustic-atlas .atlas-lab-svg .grid-line {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 0.6;
+      opacity: 0.2;
+    }
+
+    #acoustic-atlas .atlas-lab-svg .signal {
+      fill: none;
+      stroke: var(--atlas-brass);
+      stroke-width: 1.4;
+    }
+
+    #acoustic-atlas .atlas-evidence {
+      display: grid;
+      align-content: start;
+    }
+
+    #acoustic-atlas .atlas-evidence-item {
+      padding: 14px;
+      border-bottom: 1px solid var(--atlas-line);
+    }
+
+    #acoustic-atlas .atlas-evidence-item strong {
+      display: block;
+      margin: 6px 0;
+      color: var(--atlas-ink);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    #acoustic-atlas .atlas-evidence-item p {
+      color: var(--atlas-muted);
+      font-size: 10px;
+      line-height: 1.45;
+    }
+
+    #acoustic-atlas .atlas-evidence-state {
+      color: var(--atlas-brass);
+      font-family: var(--atlas-mono);
+      font-size: 8px;
+      text-transform: uppercase;
+    }
+
+    #acoustic-atlas .atlas-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 46px;
+      padding: 0 14px;
+      border-top: 1px solid var(--atlas-line-strong);
+      color: var(--atlas-muted);
+      font-family: var(--atlas-mono);
+      font-size: 9px;
+      text-transform: uppercase;
+    }
+
+    #acoustic-atlas .atlas-footer-progress {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #acoustic-atlas .atlas-footer-progress i {
+      width: 72px;
+      height: 1px;
+      overflow: hidden;
+      background: var(--atlas-line-strong);
+    }
+
+    #acoustic-atlas .atlas-footer-progress i::after {
+      display: block;
+      width: var(--progress, 20%);
+      height: 100%;
+      background: var(--atlas-green);
+      content: &quot;&quot;;
+      transition: width 280ms ease-out;
+    }
+
+    #acoustic-atlas .atlas-nav-actions {
+      display: flex;
+      gap: 6px;
+    }
+
+    #acoustic-atlas .atlas-icon-btn {
+      min-width: 34px;
+      min-height: 28px;
+      border: 1px solid var(--atlas-line-strong);
+      color: var(--atlas-ink);
+      background: rgb(255 255 255 / 16%);
+    }
+
+    #acoustic-atlas .atlas-icon-btn:disabled {
+      cursor: not-allowed;
+      opacity: 0.3;
+    }
+
+    @media (max-width: 700px) {
+      #acoustic-atlas .atlas-header {
+        grid-template-columns: 1fr auto;
+        gap: 8px;
+      }
+
+      #acoustic-atlas .atlas-tabs {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding-bottom: 7px;
+      }
+
+      #acoustic-atlas .atlas-menu span {
+        display: none;
+      }
+
+      #acoustic-atlas .atlas-shell {
+        grid-template-columns: 1fr;
+      }
+
+      #acoustic-atlas .atlas-rail {
+        grid-template-columns: repeat(5, 1fr);
+        border-right: 0;
+        border-bottom: 1px solid var(--atlas-line-strong);
+      }
+
+      #acoustic-atlas .atlas-rail-btn {
+        min-height: 40px;
+        border-right: 1px solid var(--atlas-line);
+        border-bottom: 0;
+      }
+
+      #acoustic-atlas .atlas-rail-btn[aria-pressed=&quot;true&quot;]::before {
+        display: none;
+      }
+
+      #acoustic-atlas .atlas-hero,
+      #acoustic-atlas .atlas-theory,
+      #acoustic-atlas .atlas-construction,
+      #acoustic-atlas .atlas-materials-layout,
+      #acoustic-atlas .atlas-lab-layout {
+        grid-template-columns: 1fr;
+      }
+
+      #acoustic-atlas .atlas-intro,
+      #acoustic-atlas .atlas-model-wrap,
+      #acoustic-atlas .atlas-metrics,
+      #acoustic-atlas .atlas-steps,
+      #acoustic-atlas .atlas-exploded-svg-wrap,
+      #acoustic-atlas .atlas-samples,
+      #acoustic-atlas .atlas-lab-plan {
+        border-right: 0;
+        border-bottom: 1px solid var(--atlas-line-strong);
+      }
+
+      #acoustic-atlas .atlas-title {
+        max-width: none;
+      }
+
+      #acoustic-atlas .atlas-intro {
+        min-height: 280px;
+      }
+
+      #acoustic-atlas .atlas-metrics {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      #acoustic-atlas .atlas-status {
+        align-content: start;
+      }
+
+      #acoustic-atlas .atlas-drawings,
+      #acoustic-atlas .atlas-detail-grid {
+        grid-template-columns: 1fr;
+      }
+
+      #acoustic-atlas .atlas-drawing,
+      #acoustic-atlas .atlas-detail {
+        border-right: 0;
+        border-bottom: 1px solid var(--atlas-line);
+      }
+
+      #acoustic-atlas .atlas-band {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      #acoustic-atlas .atlas-band-mark {
+        min-height: 54px;
+      }
+
+      #acoustic-atlas .atlas-section-head {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      #acoustic-atlas .atlas-steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      #acoustic-atlas .atlas-samples {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 440px) {
+      #acoustic-atlas .atlas-tabs {
+        display: none;
+      }
+
+      #acoustic-atlas .atlas-header {
+        grid-template-columns: 1fr auto;
+        min-height: 54px;
+        padding-inline: 14px;
+      }
+
+      #acoustic-atlas .atlas-mobile-chapter {
+        display: block;
+      }
+
+      #acoustic-atlas .atlas-menu {
+        display: none;
+      }
+
+      #acoustic-atlas .atlas-rail-btn {
+        min-height: 44px;
+      }
+
+      #acoustic-atlas .atlas-intro {
+        min-height: 0;
+        padding: 22px 18px 20px;
+      }
+
+      #acoustic-atlas .atlas-title {
+        font-size: 34px;
+      }
+
+      #acoustic-atlas .atlas-subtitle {
+        font-size: 13px;
+      }
+
+      #acoustic-atlas .atlas-model-wrap {
+        min-height: 366px;
+      }
+
+      #acoustic-atlas #atlas-3d {
+        height: 306px;
+      }
+
+      #acoustic-atlas .atlas-band,
+      #acoustic-atlas .atlas-steps {
+        grid-template-columns: 1fr;
+      }
+
+      #acoustic-atlas .atlas-metrics {
+        grid-template-columns: 1fr 1fr;
+        padding: 18px;
+      }
+
+      #acoustic-atlas .atlas-brass-control {
+        width: 48px;
+        height: 48px;
+      }
+
+      #acoustic-atlas .atlas-band-mark {
+        display: none;
+      }
+
+      #acoustic-atlas .atlas-wave-detail {
+        grid-template-columns: 1fr;
+      }
+
+      #acoustic-atlas .atlas-icon-btn {
+        min-width: 42px;
+        min-height: 42px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #acoustic-atlas *,
+      #acoustic-atlas *::before,
+      #acoustic-atlas *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  &lt;/style&gt;
+
+  &lt;header class=&quot;atlas-header&quot;&gt;
+    &lt;div class=&quot;atlas-brand&quot;&gt;Тихие Стены&lt;/div&gt;
+    &lt;div class=&quot;atlas-mobile-chapter&quot; id=&quot;atlas-mobile-chapter&quot;&gt;01 / Атлас&lt;/div&gt;
+    &lt;nav class=&quot;atlas-tabs&quot; aria-label=&quot;Разделы атласа&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;atlas-tab&quot; data-atlas-view=&quot;0&quot; aria-pressed=&quot;true&quot;&gt;Атлас&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;atlas-tab&quot; data-atlas-view=&quot;1&quot; aria-pressed=&quot;false&quot;&gt;Теория&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;atlas-tab&quot; data-atlas-view=&quot;2&quot; aria-pressed=&quot;false&quot;&gt;Конструкция&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;atlas-tab&quot; data-atlas-view=&quot;3&quot; aria-pressed=&quot;false&quot;&gt;Материалы&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;atlas-tab&quot; data-atlas-view=&quot;4&quot; aria-pressed=&quot;false&quot;&gt;Лаборатория&lt;/button&gt;
+    &lt;/nav&gt;
+    &lt;div class=&quot;atlas-menu&quot; aria-label=&quot;Акустический атлас&quot;&gt;
+      &lt;span&gt;Ред. 01&lt;/span&gt;
+      &lt;span class=&quot;atlas-menu-mark&quot; aria-hidden=&quot;true&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;div class=&quot;atlas-shell&quot;&gt;
+    &lt;nav class=&quot;atlas-rail&quot; aria-label=&quot;Навигация по главам&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;atlas-rail-btn&quot; data-atlas-view=&quot;0&quot; aria-pressed=&quot;true&quot;&gt;01&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;atlas-rail-btn&quot; data-atlas-view=&quot;1&quot; aria-pressed=&quot;false&quot;&gt;02&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;atlas-rail-btn&quot; data-atlas-view=&quot;2&quot; aria-pressed=&quot;false&quot;&gt;03&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;atlas-rail-btn&quot; data-atlas-view=&quot;3&quot; aria-pressed=&quot;false&quot;&gt;04&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;atlas-rail-btn&quot; data-atlas-view=&quot;4&quot; aria-pressed=&quot;false&quot;&gt;05&lt;/button&gt;
+    &lt;/nav&gt;
+
+    &lt;main class=&quot;atlas-stage&quot;&gt;
+      &lt;section class=&quot;atlas-slide is-active&quot; data-atlas-slide=&quot;0&quot; aria-labelledby=&quot;atlas-title-0&quot;&gt;
+        &lt;div class=&quot;atlas-hero&quot;&gt;
+          &lt;div class=&quot;atlas-intro&quot;&gt;
+            &lt;div&gt;
+              &lt;div class=&quot;atlas-kicker&quot;&gt;Архитектурная акустика&lt;/div&gt;
+              &lt;h1 class=&quot;atlas-title&quot; id=&quot;atlas-title-0&quot;&gt;Акустический атлас&lt;/h1&gt;
+              &lt;p class=&quot;atlas-subtitle&quot;&gt;
+                Интерактивный разбор натяжной звукопоглощающей конструкции
+                и лабораторной гипотезы её косвенной звукоизоляции.
+              &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;ol class=&quot;atlas-spec-list&quot;&gt;
+              &lt;li&gt;&lt;strong&gt;01&lt;/strong&gt;&lt;span&gt;Облицовочная плита&lt;/span&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;strong&gt;02&lt;/strong&gt;&lt;span&gt;Воздушная прослойка&lt;/span&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;strong&gt;03&lt;/strong&gt;&lt;span&gt;Акустическая мембрана&lt;/span&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;strong&gt;04&lt;/strong&gt;&lt;span&gt;Поглощающий войлок&lt;/span&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;strong&gt;05&lt;/strong&gt;&lt;span&gt;Натяжная ткань&lt;/span&gt;&lt;/li&gt;
+            &lt;/ol&gt;
+          &lt;/div&gt;
+
+          &lt;div class=&quot;atlas-model-wrap&quot; id=&quot;atlas-model-wrap&quot;&gt;
+            &lt;div class=&quot;atlas-model-code&quot;&gt;AXO / WALL-TS-01&lt;/div&gt;
+            &lt;div class=&quot;atlas-model-fallback&quot; aria-hidden=&quot;true&quot;&gt;
+              &lt;i style=&quot;--fallback-x:-95px;--fallback-color:rgb(210 205 190)&quot;&gt;&lt;/i&gt;
+              &lt;i style=&quot;--fallback-x:-55px;--fallback-color:rgb(56 56 50)&quot;&gt;&lt;/i&gt;
+              &lt;i style=&quot;--fallback-x:-12px;--fallback-color:rgb(175 147 96)&quot;&gt;&lt;/i&gt;
+              &lt;i style=&quot;--fallback-x:34px;--fallback-color:rgb(94 88 75)&quot;&gt;&lt;/i&gt;
+              &lt;i style=&quot;--fallback-x:80px;--fallback-color:rgb(224 218 204)&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;canvas id=&quot;atlas-3d&quot; role=&quot;img&quot; aria-label=&quot;Интерактивная трёхмерная модель разнесённых слоёв акустической стены&quot;&gt;&lt;/canvas&gt;
+            &lt;div class=&quot;atlas-model-hint&quot;&gt;Перетащите для вращения&lt;/div&gt;
+            &lt;label class=&quot;atlas-explosion&quot; for=&quot;atlas-explode&quot;&gt;
+              &lt;span&gt;Сборка&lt;/span&gt;
+              &lt;input class=&quot;atlas-range&quot; id=&quot;atlas-explode&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;74&quot; aria-label=&quot;Степень разнесения слоёв&quot;&gt;
+              &lt;span&gt;Разрез&lt;/span&gt;
+            &lt;/label&gt;
+          &lt;/div&gt;
+
+          &lt;aside class=&quot;atlas-metrics&quot; aria-label=&quot;Ключевые параметры&quot;&gt;
+            &lt;div class=&quot;atlas-metric&quot;&gt;
+              &lt;div class=&quot;atlas-label&quot;&gt;Rw / исходно&lt;/div&gt;
+              &lt;div class=&quot;atlas-value&quot;&gt;≈48 дБ&lt;/div&gt;
+              &lt;small&gt;предполагаемая собственная изоляция перегородки&lt;/small&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;atlas-metric&quot;&gt;
+              &lt;div class=&quot;atlas-label&quot;&gt;Прирост&lt;/div&gt;
+              &lt;div class=&quot;atlas-value is-pending&quot;&gt;+? дБ&lt;/div&gt;
+              &lt;small&gt;факт измерения ожидается&lt;/small&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;atlas-status&quot;&gt;
+              &lt;div class=&quot;atlas-status-line&quot;&gt;&lt;i style=&quot;--status-color:var(--atlas-lime)&quot;&gt;&lt;/i&gt; факт&lt;/div&gt;
+              &lt;div class=&quot;atlas-status-line&quot;&gt;&lt;i style=&quot;--status-color:var(--atlas-brass)&quot;&gt;&lt;/i&gt; гипотеза&lt;/div&gt;
+              &lt;div class=&quot;atlas-status-line&quot;&gt;&lt;i style=&quot;--status-color:var(--atlas-charcoal)&quot;&gt;&lt;/i&gt; ожидается&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;atlas-brass-control&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;
+          &lt;/aside&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;atlas-drawings&quot;&gt;
+          &lt;article class=&quot;atlas-drawing&quot;&gt;
+            &lt;div class=&quot;atlas-drawing-head&quot;&gt;&lt;span&gt;Разрез 1—1&lt;/span&gt;&lt;span&gt;M 1:20&lt;/span&gt;&lt;/div&gt;
+            &lt;svg class=&quot;atlas-blueprint&quot; viewBox=&quot;0 0 200 145&quot; role=&quot;img&quot; aria-labelledby=&quot;section-title section-desc&quot;&gt;
+              &lt;title id=&quot;section-title&quot;&gt;Архитектурный разрез узла стены&lt;/title&gt;
+              &lt;desc id=&quot;section-desc&quot;&gt;Схематичный чертёж многослойной конструкции с размерными линиями.&lt;/desc&gt;
+              &lt;path class=&quot;strong&quot; d=&quot;M55 18v106M66 18v106M82 18v106M112 18v106M128 18v106M141 18v106&quot;/&gt;
+              &lt;path class=&quot;thin&quot; d=&quot;M48 28h100M48 111h100M41 18h12M41 124h12M45 18v106M35 18v106M32 18h7M32 124h7&quot;/&gt;
+              &lt;path class=&quot;ghost&quot; d=&quot;M28 70h132M98 9v126&quot;/&gt;
+              &lt;path class=&quot;thin&quot; d=&quot;M24 28h12M24 111h12M27 28v83M17 70h20M148 28h18M148 111h18M162 28v83&quot;/&gt;
+              &lt;path class=&quot;thin&quot; d=&quot;M66 18l16 10M82 18L66 28M112 18l16 10M128 18l-16 10&quot;/&gt;
+              &lt;text x=&quot;8&quot; y=&quot;72&quot;&gt;2700&lt;/text&gt;&lt;text x=&quot;50&quot; y=&quot;139&quot;&gt;12.5&lt;/text&gt;&lt;text x=&quot;76&quot; y=&quot;139&quot;&gt;50&lt;/text&gt;
+              &lt;text x=&quot;105&quot; y=&quot;139&quot;&gt;50&lt;/text&gt;&lt;text x=&quot;132&quot; y=&quot;139&quot;&gt;12.5&lt;/text&gt;
+              &lt;text x=&quot;54&quot; y=&quot;13&quot;&gt;01&lt;/text&gt;&lt;text x=&quot;78&quot; y=&quot;13&quot;&gt;02&lt;/text&gt;&lt;text x=&quot;109&quot; y=&quot;13&quot;&gt;03&lt;/text&gt;&lt;text x=&quot;137&quot; y=&quot;13&quot;&gt;04&lt;/text&gt;
+            &lt;/svg&gt;
+          &lt;/article&gt;
+
+          &lt;article class=&quot;atlas-drawing&quot;&gt;
+            &lt;div class=&quot;atlas-drawing-head&quot;&gt;&lt;span&gt;Акустические траектории&lt;/span&gt;&lt;span&gt;Схема&lt;/span&gt;&lt;/div&gt;
+            &lt;svg class=&quot;atlas-blueprint&quot; viewBox=&quot;0 0 200 145&quot; role=&quot;img&quot; aria-labelledby=&quot;trajectory-title trajectory-desc&quot;&gt;
+              &lt;title id=&quot;trajectory-title&quot;&gt;Траектории звуковых волн&lt;/title&gt;
+              &lt;desc id=&quot;trajectory-desc&quot;&gt;Входящая волна, стена и ослабленная переизлучённая волна.&lt;/desc&gt;
+              &lt;path class=&quot;strong&quot; d=&quot;M103 18v108&quot;/&gt;
+              &lt;path class=&quot;thin&quot; d=&quot;M108 18v108M98 18v108&quot;/&gt;
+              &lt;path class=&quot;strong&quot; d=&quot;M88 34c-31 8-31 68 0 76M78 27c-48 13-48 78 0 91M66 21c-64 19-64 91 0 103&quot;/&gt;
+              &lt;path class=&quot;ghost&quot; d=&quot;M118 43c19 7 19 51 0 58M126 35c32 12 32 67 0 78M136 29c43 17 43 80 0 94&quot;/&gt;
+              &lt;path class=&quot;thin&quot; d=&quot;M16 72h72M118 72h65&quot;/&gt;
+              &lt;text x=&quot;18&quot; y=&quot;136&quot;&gt;ПАДАЮЩАЯ ВОЛНА&lt;/text&gt;&lt;text x=&quot;119&quot; y=&quot;136&quot;&gt;ПЕРЕИЗЛУЧЕНИЕ&lt;/text&gt;
+            &lt;/svg&gt;
+          &lt;/article&gt;
+
+          &lt;article class=&quot;atlas-drawing&quot;&gt;
+            &lt;div class=&quot;atlas-drawing-head&quot;&gt;&lt;span&gt;План лаборатории&lt;/span&gt;&lt;span&gt;5 м&lt;/span&gt;&lt;/div&gt;
+            &lt;svg class=&quot;atlas-blueprint&quot; viewBox=&quot;0 0 240 145&quot; role=&quot;img&quot; aria-labelledby=&quot;lab-plan-title lab-plan-desc&quot;&gt;
+              &lt;title id=&quot;lab-plan-title&quot;&gt;План лаборатории строительной физики&lt;/title&gt;
+              &lt;desc id=&quot;lab-plan-desc&quot;&gt;Две измерительные камеры, разделённые испытуемой перегородкой.&lt;/desc&gt;
+              &lt;path class=&quot;strong&quot; d=&quot;M20 24h200v94H20zM115 24v94&quot;/&gt;
+              &lt;path class=&quot;thin&quot; d=&quot;M27 31h81v80H27zM122 31h91v80h-91z&quot;/&gt;
+              &lt;path class=&quot;ghost&quot; d=&quot;M35 42h63v58H35zM132 42h70v58h-70z&quot;/&gt;
+              &lt;circle class=&quot;strong&quot; cx=&quot;66&quot; cy=&quot;70&quot; r=&quot;8&quot;/&gt;
+              &lt;path class=&quot;thin&quot; d=&quot;M66 61v-12M58 78l-12 10M74 78l12 10&quot;/&gt;
+              &lt;circle class=&quot;strong&quot; cx=&quot;168&quot; cy=&quot;70&quot; r=&quot;4&quot;/&gt;
+              &lt;path class=&quot;thin&quot; d=&quot;M168 74v14M160 88h16&quot;/&gt;
+              &lt;path class=&quot;ghost&quot; d=&quot;M74 70h38M122 70h42&quot;/&gt;
+              &lt;text x=&quot;34&quot; y=&quot;42&quot;&gt;КАМЕРА ВЫСОКОГО УРОВНЯ&lt;/text&gt;&lt;text x=&quot;132&quot; y=&quot;42&quot;&gt;КАМЕРА НИЗКОГО УРОВНЯ&lt;/text&gt;
+              &lt;text x=&quot;96&quot; y=&quot;132&quot;&gt;ИСПЫТУЕМАЯ ПЕРЕГОРОДКА&lt;/text&gt;
+            &lt;/svg&gt;
+          &lt;/article&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;atlas-band&quot; aria-label=&quot;Исходные данные испытания&quot;&gt;
+          &lt;div class=&quot;atlas-band-metric&quot;&gt;
+            &lt;div class=&quot;atlas-label&quot;&gt;Источник&lt;/div&gt;
+            &lt;div class=&quot;atlas-value&quot;&gt;100+ дБ&lt;/div&gt;
+            &lt;small&gt;камера высокого уровня&lt;/small&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;atlas-band-metric&quot;&gt;
+            &lt;div class=&quot;atlas-label&quot;&gt;Перегородка&lt;/div&gt;
+            &lt;div class=&quot;atlas-value&quot;&gt;≈48 дБ&lt;/div&gt;
+            &lt;small&gt;исходная гипотеза&lt;/small&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;atlas-band-metric&quot;&gt;
+            &lt;div class=&quot;atlas-label&quot;&gt;Прирост&lt;/div&gt;
+            &lt;div class=&quot;atlas-value is-pending&quot;&gt;+? дБ&lt;/div&gt;
+            &lt;small&gt;результат отсутствует в транскрипте&lt;/small&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;atlas-band-mark&quot;&gt;A&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;atlas-detail-grid&quot;&gt;
+          &lt;article class=&quot;atlas-detail&quot;&gt;
+            &lt;div class=&quot;atlas-drawing-head&quot;&gt;&lt;span&gt;Узел примыкания&lt;/span&gt;&lt;span&gt;01&lt;/span&gt;&lt;/div&gt;
+            &lt;svg class=&quot;atlas-blueprint&quot; viewBox=&quot;0 0 200 145&quot; role=&quot;img&quot; aria-label=&quot;Чертёж примыкания конструкции к перекрытию&quot;&gt;
+              &lt;path class=&quot;strong&quot; d=&quot;M25 28h150v18H25zM68 46v72M82 46v72M98 46v72M126 46v72M140 46v72&quot;/&gt;
+              &lt;path class=&quot;thin&quot; d=&quot;M42 46v72M156 46v72M35 118h130M58 58h92M58 106h92&quot;/&gt;
+              &lt;path class=&quot;ghost&quot; d=&quot;M14 72h172M112 20v113&quot;/&gt;
+              &lt;path class=&quot;thin&quot; d=&quot;M68 58l14 8M82 58l-14 8M126 58l14 8M140 58l-14 8&quot;/&gt;
+              &lt;text x=&quot;28&quot; y=&quot;23&quot;&gt;ПЕРЕКРЫТИЕ&lt;/text&gt;&lt;text x=&quot;46&quot; y=&quot;135&quot;&gt;ГЕРМЕТИЧНОЕ ПРИМЫКАНИЕ&lt;/text&gt;
+            &lt;/svg&gt;
+          &lt;/article&gt;
+
+          &lt;article class=&quot;atlas-detail&quot;&gt;
+            &lt;div class=&quot;atlas-drawing-head&quot;&gt;&lt;span&gt;Материалы&lt;/span&gt;&lt;span&gt;05 слоёв&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;atlas-material-stack&quot; aria-label=&quot;Образцы материалов конструкции&quot;&gt;
+              &lt;i style=&quot;--sample-h:90px;--sample-y:8px;--sample-bg:rgb(219 213 199)&quot;&gt;&lt;/i&gt;
+              &lt;i style=&quot;--sample-h:112px;--sample-y:0;--sample-bg:rgb(61 60 54)&quot;&gt;&lt;/i&gt;
+              &lt;i style=&quot;--sample-h:98px;--sample-y:7px;--sample-bg:rgb(186 157 101)&quot;&gt;&lt;/i&gt;
+              &lt;i style=&quot;--sample-h:118px;--sample-y:-2px;--sample-bg:rgb(92 85 74)&quot;&gt;&lt;/i&gt;
+              &lt;i style=&quot;--sample-h:104px;--sample-y:4px;--sample-bg:rgb(228 223 211)&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+          &lt;/article&gt;
+
+          &lt;article class=&quot;atlas-detail&quot;&gt;
+            &lt;div class=&quot;atlas-drawing-head&quot;&gt;&lt;span&gt;Спектр звукоизоляции&lt;/span&gt;&lt;span&gt;Схематично&lt;/span&gt;&lt;/div&gt;
+            &lt;svg class=&quot;atlas-spectrum&quot; viewBox=&quot;0 0 280 130&quot; role=&quot;img&quot; aria-labelledby=&quot;spectrum-title spectrum-desc&quot;&gt;
+              &lt;title id=&quot;spectrum-title&quot;&gt;Схематичное сравнение спектров&lt;/title&gt;
+              &lt;desc id=&quot;spectrum-desc&quot;&gt;Сплошная линия показывает исходную перегородку, пунктир — гипотезу после монтажа. Это не измеренные данные.&lt;/desc&gt;
+              &lt;path class=&quot;grid&quot; d=&quot;M30 18h232M30 38h232M30 58h232M30 78h232M30 98h232M30 118h232M30 18v100M76 18v100M122 18v100M168 18v100M214 18v100M262 18v100&quot;/&gt;
+              &lt;path class=&quot;base-line&quot; d=&quot;M30 104C48 92 54 78 74 74S102 55 122 56S151 45 168 51S198 61 216 70S244 83 262 86&quot;/&gt;
+              &lt;path class=&quot;hypothesis-line&quot; d=&quot;M30 97C48 84 55 70 74 66S102 48 122 49S151 38 168 43S198 53 216 61S244 74 262 77&quot;/&gt;
+              &lt;text x=&quot;6&quot; y=&quot;20&quot;&gt;дБ&lt;/text&gt;&lt;text x=&quot;24&quot; y=&quot;127&quot;&gt;63&lt;/text&gt;&lt;text x=&quot;71&quot; y=&quot;127&quot;&gt;125&lt;/text&gt;&lt;text x=&quot;117&quot; y=&quot;127&quot;&gt;250&lt;/text&gt;
+              &lt;text x=&quot;164&quot; y=&quot;127&quot;&gt;500&lt;/text&gt;&lt;text x=&quot;211&quot; y=&quot;127&quot;&gt;1k&lt;/text&gt;&lt;text x=&quot;253&quot; y=&quot;127&quot;&gt;4k&lt;/text&gt;
+              &lt;text x=&quot;184&quot; y=&quot;14&quot;&gt;— исходно&lt;/text&gt;&lt;text x=&quot;225&quot; y=&quot;14&quot;&gt;-- гипотеза&lt;/text&gt;
+            &lt;/svg&gt;
+          &lt;/article&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;section class=&quot;atlas-slide&quot; data-atlas-slide=&quot;1&quot; aria-labelledby=&quot;atlas-title-1&quot;&gt;
+        &lt;header class=&quot;atlas-section-head&quot;&gt;
+          &lt;div&gt;
+            &lt;div class=&quot;atlas-kicker&quot;&gt;02 / Теория передачи&lt;/div&gt;
+            &lt;h2 class=&quot;atlas-section-title&quot; id=&quot;atlas-title-1&quot;&gt;Стена на мгновение становится динамиком&lt;/h2&gt;
+          &lt;/div&gt;
+          &lt;p class=&quot;atlas-section-copy&quot;&gt;
+            Звук передаётся не «сквозь материал» напрямую: он заставляет перегородку
+            вибрировать, а та снова возбуждает воздух по другую сторону.
+          &lt;/p&gt;
+        &lt;/header&gt;
+
+        &lt;div class=&quot;atlas-theory&quot;&gt;
+          &lt;nav class=&quot;atlas-steps&quot; aria-label=&quot;Этапы передачи звука&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;atlas-step-btn&quot; data-theory-step=&quot;0&quot; aria-pressed=&quot;true&quot;&gt;&lt;span&gt;01&lt;/span&gt;&lt;span&gt;Колебания воздушной среды&lt;/span&gt;&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;atlas-step-btn&quot; data-theory-step=&quot;1&quot; aria-pressed=&quot;false&quot;&gt;&lt;span&gt;02&lt;/span&gt;&lt;span&gt;Импульс передаётся стене&lt;/span&gt;&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;atlas-step-btn&quot; data-theory-step=&quot;2&quot; aria-pressed=&quot;false&quot;&gt;&lt;span&gt;03&lt;/span&gt;&lt;span&gt;Стена переизлучает энергию&lt;/span&gt;&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;atlas-step-btn&quot; data-theory-step=&quot;3&quot; aria-pressed=&quot;false&quot;&gt;&lt;span&gt;04&lt;/span&gt;&lt;span&gt;Вязкая прослойка ослабляет связь&lt;/span&gt;&lt;/button&gt;
+          &lt;/nav&gt;
+          &lt;div class=&quot;atlas-wave-lab&quot; data-step=&quot;0&quot;&gt;
+            &lt;div class=&quot;atlas-wave-stage&quot;&gt;
+              &lt;svg class=&quot;atlas-wave-svg&quot; viewBox=&quot;0 0 560 280&quot; role=&quot;img&quot; aria-labelledby=&quot;wave-title wave-desc&quot;&gt;
+                &lt;title id=&quot;wave-title&quot;&gt;Схема передачи звука через перегородку&lt;/title&gt;
+                &lt;desc id=&quot;wave-desc&quot;&gt;Входящие волны воздействуют на стену, которая переизлучает ослабленные волны.&lt;/desc&gt;
+                &lt;path class=&quot;room&quot; d=&quot;M22 46h500v188H22z&quot;/&gt;
+                &lt;path class=&quot;room&quot; d=&quot;M43 68h204v144H43zM315 68h185v144H315z&quot;/&gt;
+                &lt;rect class=&quot;wall&quot; x=&quot;268&quot; y=&quot;48&quot; width=&quot;25&quot; height=&quot;184&quot;/&gt;
+                &lt;rect class=&quot;membrane&quot; x=&quot;296&quot; y=&quot;48&quot; width=&quot;7&quot; height=&quot;184&quot;/&gt;
+                &lt;path class=&quot;wave-in&quot; d=&quot;M72 140c20-30 20-30 40 0s20 30 40 0 20-30 40 0 20 30 40 0&quot;/&gt;
+                &lt;path class=&quot;wave-in&quot; d=&quot;M82 140c16-22 16-22 32 0s16 22 32 0 16-22 32 0 16 22 32 0&quot;/&gt;
+                &lt;path class=&quot;wave-out&quot; d=&quot;M320 140c18-26 18-26 36 0s18 26 36 0 18-26 36 0 18 26 36 0 18-26 36 0&quot;/&gt;
+                &lt;path class=&quot;wave-out&quot; d=&quot;M330 140c14-18 14-18 28 0s14 18 28 0 14-18 28 0 14 18 28 0&quot;/&gt;
+                &lt;path d=&quot;M247 118l20 22-20 22&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1&quot;/&gt;
+                &lt;text x=&quot;45&quot; y=&quot;61&quot; fill=&quot;currentColor&quot; font-family=&quot;var(--atlas-mono)&quot; font-size=&quot;8&quot;&gt;ИСТОЧНИК&lt;/text&gt;
+                &lt;text x=&quot;317&quot; y=&quot;61&quot; fill=&quot;currentColor&quot; font-family=&quot;var(--atlas-mono)&quot; font-size=&quot;8&quot;&gt;ПЕРЕИЗЛУЧЕНИЕ&lt;/text&gt;
+              &lt;/svg&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;atlas-wave-detail&quot; aria-live=&quot;polite&quot;&gt;
+              &lt;strong id=&quot;atlas-theory-title&quot;&gt;Воздушная волна&lt;/strong&gt;
+              &lt;p id=&quot;atlas-theory-copy&quot;&gt;Звуковая энергия — периодические колебания воздуха. Волна подходит к твёрдой границе и передаёт ей импульс.&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;section class=&quot;atlas-slide&quot; data-atlas-slide=&quot;2&quot; aria-labelledby=&quot;atlas-title-2&quot;&gt;
+        &lt;header class=&quot;atlas-section-head&quot;&gt;
+          &lt;div&gt;
+            &lt;div class=&quot;atlas-kicker&quot;&gt;03 / Конструкция&lt;/div&gt;
+            &lt;h2 class=&quot;atlas-section-title&quot; id=&quot;atlas-title-2&quot;&gt;Пять слоёв — одна граница сред&lt;/h2&gt;
+          &lt;/div&gt;
+          &lt;p class=&quot;atlas-section-copy&quot;&gt;
+            Выберите слой: чертёж подсветит его роль в передаче, рассеивании
+            или переизлучении звуковой энергии.
+          &lt;/p&gt;
+        &lt;/header&gt;
+
+        &lt;div class=&quot;atlas-construction&quot;&gt;
+          &lt;div class=&quot;atlas-exploded-svg-wrap&quot;&gt;
+            &lt;svg class=&quot;atlas-exploded-svg&quot; id=&quot;atlas-exploded-svg&quot; data-focus=&quot;all&quot; viewBox=&quot;0 0 520 390&quot; role=&quot;img&quot; aria-labelledby=&quot;exploded-title exploded-desc&quot;&gt;
+              &lt;title id=&quot;exploded-title&quot;&gt;Аксонометрический разрез слоёв конструкции&lt;/title&gt;
+              &lt;desc id=&quot;exploded-desc&quot;&gt;Пять разнесённых слоёв с металлическим каркасом и подписями.&lt;/desc&gt;
+              &lt;g class=&quot;layer layer-board&quot;&gt;
+                &lt;path d=&quot;M58 88l82-38 0 246-82 39z&quot; fill=&quot;rgb(218 213 199)&quot; stroke=&quot;currentColor&quot;/&gt;
+                &lt;path d=&quot;M140 50l12 7v245l-12-6z&quot; fill=&quot;rgb(191 185 168)&quot; stroke=&quot;currentColor&quot;/&gt;
+              &lt;/g&gt;
+              &lt;g class=&quot;layer layer-membrane&quot;&gt;
+                &lt;path d=&quot;M167 76l67-31v246l-67 31z&quot; fill=&quot;rgb(58 58 51)&quot; stroke=&quot;currentColor&quot;/&gt;
+                &lt;path d=&quot;M167 76l8 4v246l-8-4z&quot; fill=&quot;rgb(39 39 35)&quot; stroke=&quot;currentColor&quot;/&gt;
+                &lt;path d=&quot;M176 91l49-23M176 115l49-23M176 139l49-23M176 163l49-23M176 187l49-23M176 211l49-23M176 235l49-23M176 259l49-23M176 283l49-23&quot; stroke=&quot;rgb(241 237 225 / 30%)&quot;/&gt;
+              &lt;/g&gt;
+              &lt;g class=&quot;layer layer-frame&quot;&gt;
+                &lt;path d=&quot;M254 68l76-35v246l-76 35z&quot; fill=&quot;none&quot; stroke=&quot;rgb(117 103 77)&quot; stroke-width=&quot;7&quot;/&gt;
+                &lt;path d=&quot;M254 68l76-35M254 314l76-35M254 68v246M330 33v246M272 60v246M312 42v246&quot; fill=&quot;none&quot; stroke=&quot;rgb(117 103 77)&quot; stroke-width=&quot;5&quot;/&gt;
+                &lt;path d=&quot;M254 68l10 5 76-35-10-5M330 33l10 5v246l-10-5&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;/&gt;
+              &lt;/g&gt;
+              &lt;g class=&quot;layer layer-wool&quot;&gt;
+                &lt;path d=&quot;M276 84l48-22v188l-48 22z&quot; fill=&quot;rgb(183 155 99)&quot; stroke=&quot;currentColor&quot;/&gt;
+                &lt;path d=&quot;M283 96c18 4 16 24 32 28M281 124c19 2 17 21 34 25M281 155c21 4 17 22 35 26M281 187c18 4 16 21 35 27M281 219c17 4 16 17 35 21&quot; fill=&quot;none&quot; stroke=&quot;rgb(93 70 33 / 46%)&quot;/&gt;
+              &lt;/g&gt;
+              &lt;g class=&quot;layer layer-fabric&quot;&gt;
+                &lt;path d=&quot;M367 74l84-39v246l-84 39z&quot; fill=&quot;rgb(229 224 211)&quot; stroke=&quot;currentColor&quot;/&gt;
+                &lt;path d=&quot;M367 74l9 5v246l-9-5z&quot; fill=&quot;rgb(198 193 179)&quot; stroke=&quot;currentColor&quot;/&gt;
+                &lt;path d=&quot;M378 81l64-30M378 93l64-30M378 105l64-30M378 117l64-30M378 129l64-30M378 141l64-30M378 153l64-30M378 165l64-30M378 177l64-30M378 189l64-30M378 201l64-30M378 213l64-30M378 225l64-30M378 237l64-30M378 249l64-30M378 261l64-30M378 273l64-30M378 285l64-30M378 297l64-30&quot; stroke=&quot;rgb(21 57 45 / 12%)&quot;/&gt;
+              &lt;/g&gt;
+              &lt;g fill=&quot;var(--atlas-paper)&quot; stroke=&quot;currentColor&quot;&gt;
+                &lt;circle cx=&quot;46&quot; cy=&quot;108&quot; r=&quot;11&quot;/&gt;&lt;circle cx=&quot;154&quot; cy=&quot;95&quot; r=&quot;11&quot;/&gt;&lt;circle cx=&quot;242&quot; cy=&quot;84&quot; r=&quot;11&quot;/&gt;&lt;circle cx=&quot;332&quot; cy=&quot;70&quot; r=&quot;11&quot;/&gt;&lt;circle cx=&quot;460&quot; cy=&quot;64&quot; r=&quot;11&quot;/&gt;
+              &lt;/g&gt;
+              &lt;g fill=&quot;currentColor&quot; font-family=&quot;var(--atlas-mono)&quot; font-size=&quot;8&quot; text-anchor=&quot;middle&quot;&gt;
+                &lt;text x=&quot;46&quot; y=&quot;111&quot;&gt;01&lt;/text&gt;&lt;text x=&quot;154&quot; y=&quot;98&quot;&gt;02&lt;/text&gt;&lt;text x=&quot;242&quot; y=&quot;87&quot;&gt;03&lt;/text&gt;&lt;text x=&quot;332&quot; y=&quot;73&quot;&gt;04&lt;/text&gt;&lt;text x=&quot;460&quot; y=&quot;67&quot;&gt;05&lt;/text&gt;
+              &lt;/g&gt;
+              &lt;path d=&quot;M46 119v192M154 106v212M242 95v233M332 81v246M460 75v252&quot; stroke=&quot;currentColor&quot; stroke-dasharray=&quot;3 4&quot; opacity=&quot;.3&quot;/&gt;
+              &lt;text x=&quot;40&quot; y=&quot;346&quot; fill=&quot;currentColor&quot; font-family=&quot;var(--atlas-mono)&quot; font-size=&quot;8&quot;&gt;ПЛИТА&lt;/text&gt;
+              &lt;text x=&quot;136&quot; y=&quot;346&quot; fill=&quot;currentColor&quot; font-family=&quot;var(--atlas-mono)&quot; font-size=&quot;8&quot;&gt;МЕМБРАНА&lt;/text&gt;
+              &lt;text x=&quot;226&quot; y=&quot;346&quot; fill=&quot;currentColor&quot; font-family=&quot;var(--atlas-mono)&quot; font-size=&quot;8&quot;&gt;КАРКАС&lt;/text&gt;
+              &lt;text x=&quot;312&quot; y=&quot;346&quot; fill=&quot;currentColor&quot; font-family=&quot;var(--atlas-mono)&quot; font-size=&quot;8&quot;&gt;ВОЙЛОК&lt;/text&gt;
+              &lt;text x=&quot;440&quot; y=&quot;346&quot; fill=&quot;currentColor&quot; font-family=&quot;var(--atlas-mono)&quot; font-size=&quot;8&quot;&gt;ТКАНЬ&lt;/text&gt;
+            &lt;/svg&gt;
+          &lt;/div&gt;
+          &lt;nav class=&quot;atlas-layer-panel&quot; aria-label=&quot;Слои конструкции&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;atlas-layer-btn&quot; data-layer-focus=&quot;all&quot; aria-pressed=&quot;true&quot;&gt;&lt;span class=&quot;atlas-layer-number&quot;&gt;00&lt;/span&gt;&lt;span class=&quot;atlas-layer-name&quot;&gt;Вся конструкция&lt;/span&gt;&lt;span class=&quot;atlas-layer-size&quot;&gt;AXO&lt;/span&gt;&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;atlas-layer-btn&quot; data-layer-focus=&quot;board&quot; aria-pressed=&quot;false&quot;&gt;&lt;span class=&quot;atlas-layer-number&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;atlas-layer-name&quot;&gt;Облицовочная плита&lt;/span&gt;&lt;span class=&quot;atlas-layer-size&quot;&gt;12,5 мм&lt;/span&gt;&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;atlas-layer-btn&quot; data-layer-focus=&quot;membrane&quot; aria-pressed=&quot;false&quot;&gt;&lt;span class=&quot;atlas-layer-number&quot;&gt;02&lt;/span&gt;&lt;span class=&quot;atlas-layer-name&quot;&gt;Акустическая мембрана&lt;/span&gt;&lt;span class=&quot;atlas-layer-size&quot;&gt;тонкая&lt;/span&gt;&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;atlas-layer-btn&quot; data-layer-focus=&quot;frame&quot; aria-pressed=&quot;false&quot;&gt;&lt;span class=&quot;atlas-layer-number&quot;&gt;03&lt;/span&gt;&lt;span class=&quot;atlas-layer-name&quot;&gt;Металлический каркас&lt;/span&gt;&lt;span class=&quot;atlas-layer-size&quot;&gt;50 мм&lt;/span&gt;&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;atlas-layer-btn&quot; data-layer-focus=&quot;wool&quot; aria-pressed=&quot;false&quot;&gt;&lt;span class=&quot;atlas-layer-number&quot;&gt;04&lt;/span&gt;&lt;span class=&quot;atlas-layer-name&quot;&gt;Поглощающий войлок&lt;/span&gt;&lt;span class=&quot;atlas-layer-size&quot;&gt;вязкий&lt;/span&gt;&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;atlas-layer-btn&quot; data-layer-focus=&quot;fabric&quot; aria-pressed=&quot;false&quot;&gt;&lt;span class=&quot;atlas-layer-number&quot;&gt;05&lt;/span&gt;&lt;span class=&quot;atlas-layer-name&quot;&gt;Натяжная ткань&lt;/span&gt;&lt;span class=&quot;atlas-layer-size&quot;&gt;финиш&lt;/span&gt;&lt;/button&gt;
+          &lt;/nav&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;section class=&quot;atlas-slide&quot; data-atlas-slide=&quot;3&quot; aria-labelledby=&quot;atlas-title-3&quot;&gt;
+        &lt;header class=&quot;atlas-section-head&quot;&gt;
+          &lt;div&gt;
+            &lt;div class=&quot;atlas-kicker&quot;&gt;04 / Материалы&lt;/div&gt;
+            &lt;h2 class=&quot;atlas-section-title&quot; id=&quot;atlas-title-3&quot;&gt;Не масса, а характер контакта&lt;/h2&gt;
+          &lt;/div&gt;
+          &lt;p class=&quot;atlas-section-copy&quot;&gt;
+            Конструкция работает на границе твёрдой стены и воздуха:
+            мягкая вязкая прослойка затрудняет передачу колебаний.
+          &lt;/p&gt;
+        &lt;/header&gt;
+        &lt;div class=&quot;atlas-materials-layout&quot;&gt;
+          &lt;div class=&quot;atlas-samples&quot;&gt;
+            &lt;article class=&quot;atlas-sample&quot; style=&quot;--sample:linear-gradient(110deg,rgb(200 193 176),rgb(239 234 223),rgb(194 187 170))&quot;&gt;&lt;strong&gt;Облицовка&lt;/strong&gt;&lt;/article&gt;
+            &lt;article class=&quot;atlas-sample&quot; style=&quot;--sample:repeating-linear-gradient(72deg,rgb(62 60 54) 0 3px,rgb(78 75 66) 3px 6px)&quot;&gt;&lt;strong&gt;Мембрана&lt;/strong&gt;&lt;/article&gt;
+            &lt;article class=&quot;atlas-sample&quot; style=&quot;--sample:radial-gradient(circle at 20% 20%,rgb(213 181 118) 0 2px,transparent 3px),radial-gradient(circle at 70% 60%,rgb(142 113 65) 0 3px,transparent 4px),rgb(183 155 99)&quot;&gt;&lt;strong&gt;Войлок&lt;/strong&gt;&lt;/article&gt;
+            &lt;article class=&quot;atlas-sample&quot; style=&quot;--sample:repeating-linear-gradient(90deg,rgb(117 103 77) 0 8px,rgb(157 142 111) 8px 10px)&quot;&gt;&lt;strong&gt;Каркас&lt;/strong&gt;&lt;/article&gt;
+            &lt;article class=&quot;atlas-sample&quot; style=&quot;--sample:repeating-linear-gradient(0deg,rgb(221 215 201) 0 2px,rgb(232 227 216) 2px 4px)&quot;&gt;&lt;strong&gt;Акустическая ткань&lt;/strong&gt;&lt;/article&gt;
+            &lt;article class=&quot;atlas-sample&quot; style=&quot;--sample:linear-gradient(135deg,rgb(247 243 234),rgb(208 201 185))&quot;&gt;&lt;strong&gt;Воздушный зазор&lt;/strong&gt;&lt;/article&gt;
+          &lt;/div&gt;
+          &lt;aside class=&quot;atlas-material-analysis&quot;&gt;
+            &lt;div class=&quot;atlas-kicker&quot;&gt;Качественная модель&lt;/div&gt;
+            &lt;h3 style=&quot;margin:8px 0 0;color:var(--atlas-ink);font-size:22px;font-weight:500;letter-spacing:-.04em&quot;&gt;Куда уходит энергия&lt;/h3&gt;
+            &lt;div class=&quot;atlas-energy&quot; aria-label=&quot;Качественное распределение эффектов&quot;&gt;
+              &lt;div class=&quot;atlas-energy-row&quot;&gt;&lt;span&gt;&lt;b&gt;Отражение&lt;/b&gt;&lt;b&gt;высокое&lt;/b&gt;&lt;/span&gt;&lt;div class=&quot;atlas-energy-track&quot;&gt;&lt;i style=&quot;--energy:82%&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;
+              &lt;div class=&quot;atlas-energy-row&quot;&gt;&lt;span&gt;&lt;b&gt;Вибрация стены&lt;/b&gt;&lt;b&gt;средняя&lt;/b&gt;&lt;/span&gt;&lt;div class=&quot;atlas-energy-track&quot;&gt;&lt;i style=&quot;--energy:62%&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;
+              &lt;div class=&quot;atlas-energy-row&quot;&gt;&lt;span&gt;&lt;b&gt;Рассеивание в волокнах&lt;/b&gt;&lt;b&gt;растёт&lt;/b&gt;&lt;/span&gt;&lt;div class=&quot;atlas-energy-track&quot;&gt;&lt;i style=&quot;--energy:74%&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;
+              &lt;div class=&quot;atlas-energy-row&quot;&gt;&lt;span&gt;&lt;b&gt;Переизлучение&lt;/b&gt;&lt;b&gt;снижается&lt;/b&gt;&lt;/span&gt;&lt;div class=&quot;atlas-energy-track&quot;&gt;&lt;i style=&quot;--energy:36%&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;p style=&quot;margin-top:18px;color:var(--atlas-muted);font-size:10px;line-height:1.5&quot;&gt;
+              Полосы показывают только логику механизма из транскрипта,
+              а не лабораторные измерения.
+            &lt;/p&gt;
+          &lt;/aside&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;section class=&quot;atlas-slide&quot; data-atlas-slide=&quot;4&quot; aria-labelledby=&quot;atlas-title-4&quot;&gt;
+        &lt;header class=&quot;atlas-section-head&quot;&gt;
+          &lt;div&gt;
+            &lt;div class=&quot;atlas-kicker&quot;&gt;05 / Лаборатория&lt;/div&gt;
+            &lt;h2 class=&quot;atlas-section-title&quot; id=&quot;atlas-title-4&quot;&gt;Гипотеза должна встретиться с протоколом&lt;/h2&gt;
+          &lt;/div&gt;
+          &lt;p class=&quot;atlas-section-copy&quot;&gt;
+            Два предоставленных видео объясняют установку и физическую модель,
+            но не содержат финальной цифры прироста.
+          &lt;/p&gt;
+        &lt;/header&gt;
+        &lt;div class=&quot;atlas-lab-layout&quot;&gt;
+          &lt;div class=&quot;atlas-lab-plan&quot;&gt;
+            &lt;svg class=&quot;atlas-lab-svg&quot; viewBox=&quot;0 0 540 330&quot; role=&quot;img&quot; aria-labelledby=&quot;chamber-title chamber-desc&quot;&gt;
+              &lt;title id=&quot;chamber-title&quot;&gt;Схема двух лабораторных камер&lt;/title&gt;
+              &lt;desc id=&quot;chamber-desc&quot;&gt;Источник 100 децибел воздействует на перегородку, уровень регистрируется в приёмной камере.&lt;/desc&gt;
+              &lt;path class=&quot;chamber&quot; d=&quot;M36 78l188-46 0 224-188 42zM224 32l78 44v224l-78-44z&quot;/&gt;
+              &lt;path class=&quot;chamber&quot; d=&quot;M302 76l188-42v224l-188 42z&quot;/&gt;
+              &lt;path class=&quot;grid-line&quot; d=&quot;M58 88l143-34M58 118l143-34M58 148l143-34M58 178l143-34M58 208l143-34M58 238l143-34M78 68v212M112 60v212M146 52v212M180 44v212&quot;/&gt;
+              &lt;path class=&quot;grid-line&quot; d=&quot;M324 87l143-32M324 117l143-32M324 147l143-32M324 177l143-32M324 207l143-32M324 237l143-32M344 78v212M378 70v212M412 62v212M446 54v212&quot;/&gt;
+              &lt;rect x=&quot;132&quot; y=&quot;143&quot; width=&quot;36&quot; height=&quot;48&quot; fill=&quot;var(--atlas-charcoal)&quot; stroke=&quot;currentColor&quot;/&gt;
+              &lt;circle cx=&quot;150&quot; cy=&quot;167&quot; r=&quot;10&quot; fill=&quot;none&quot; stroke=&quot;var(--atlas-paper)&quot;/&gt;
+              &lt;path class=&quot;signal&quot; d=&quot;M176 167c18-22 18-22 36 0M181 167c14-16 14-16 28 0M306 167c17-14 17-14 34 0M316 167c11-8 11-8 22 0&quot;/&gt;
+              &lt;circle cx=&quot;404&quot; cy=&quot;167&quot; r=&quot;6&quot; fill=&quot;var(--atlas-green)&quot;/&gt;
+              &lt;path class=&quot;grid-line&quot; d=&quot;M404 173v34M390 207h28&quot;/&gt;
+              &lt;text x=&quot;64&quot; y=&quot;315&quot; fill=&quot;currentColor&quot; font-family=&quot;var(--atlas-mono)&quot; font-size=&quot;9&quot;&gt;КАМЕРА ВЫСОКОГО УРОВНЯ · 100+ дБ&lt;/text&gt;
+              &lt;text x=&quot;328&quot; y=&quot;315&quot; fill=&quot;currentColor&quot; font-family=&quot;var(--atlas-mono)&quot; font-size=&quot;9&quot;&gt;ПРИЁМНАЯ КАМЕРА · ИЗМЕРЕНИЕ&lt;/text&gt;
+              &lt;text x=&quot;220&quot; y=&quot;24&quot; fill=&quot;currentColor&quot; font-family=&quot;var(--atlas-mono)&quot; font-size=&quot;9&quot;&gt;ПЕРЕГОРОДКА&lt;/text&gt;
+            &lt;/svg&gt;
+          &lt;/div&gt;
+          &lt;aside class=&quot;atlas-evidence&quot;&gt;
+            &lt;div class=&quot;atlas-evidence-item&quot;&gt;
+              &lt;span class=&quot;atlas-evidence-state&quot;&gt;Факт из видео&lt;/span&gt;
+              &lt;strong&gt;Контролируемый источник&lt;/strong&gt;
+              &lt;p&gt;Колонка формирует уровень выше 100 дБ в камере высокого уровня.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;atlas-evidence-item&quot;&gt;
+              &lt;span class=&quot;atlas-evidence-state&quot;&gt;Исходная гипотеза&lt;/span&gt;
+              &lt;strong&gt;≈48 дБ&lt;/strong&gt;
+              &lt;p&gt;Так оценивается собственная изоляция гипсокартонной переговорки.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;atlas-evidence-item&quot;&gt;
+              &lt;span class=&quot;atlas-evidence-state&quot;&gt;Ожидание команды&lt;/span&gt;
+              &lt;strong&gt;+5…8 дБ&lt;/strong&gt;
+              &lt;p&gt;Диапазон звучит как предположение, а не как итоговый результат.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;atlas-evidence-item&quot;&gt;
+              &lt;span class=&quot;atlas-evidence-state&quot;&gt;Нет в материале&lt;/span&gt;
+              &lt;strong&gt;Финальный протокол&lt;/strong&gt;
+              &lt;p&gt;Точная измеренная величина прироста в транскриптах отсутствует.&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/aside&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;footer class=&quot;atlas-footer&quot;&gt;
+        &lt;span id=&quot;atlas-footer-title&quot;&gt;Атлас / обзор&lt;/span&gt;
+        &lt;span class=&quot;atlas-footer-progress&quot;&gt;&lt;i id=&quot;atlas-progress&quot;&gt;&lt;/i&gt;&lt;b id=&quot;atlas-page&quot;&gt;01 / 05&lt;/b&gt;&lt;/span&gt;
+        &lt;span class=&quot;atlas-nav-actions&quot;&gt;
+          &lt;button type=&quot;button&quot; class=&quot;atlas-icon-btn&quot; id=&quot;atlas-prev&quot; aria-label=&quot;Предыдущая глава&quot; disabled&gt;←&lt;/button&gt;
+          &lt;button type=&quot;button&quot; class=&quot;atlas-icon-btn&quot; id=&quot;atlas-next&quot; aria-label=&quot;Следующая глава&quot;&gt;→&lt;/button&gt;
+        &lt;/span&gt;
+      &lt;/footer&gt;
+    &lt;/main&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    (function () {
+      var root = document.getElementById(&quot;acoustic-atlas&quot;);
+      if (!root) return;
+
+      var slides = Array.prototype.slice.call(root.querySelectorAll(&quot;[data-atlas-slide]&quot;));
+      var viewButtons = Array.prototype.slice.call(root.querySelectorAll(&quot;[data-atlas-view]&quot;));
+      var prev = root.querySelector(&quot;#atlas-prev&quot;);
+      var next = root.querySelector(&quot;#atlas-next&quot;);
+      var page = root.querySelector(&quot;#atlas-page&quot;);
+      var footerTitle = root.querySelector(&quot;#atlas-footer-title&quot;);
+      var progress = root.querySelector(&quot;#atlas-progress&quot;);
+      var mobileChapter = root.querySelector(&quot;#atlas-mobile-chapter&quot;);
+      var activeView = 0;
+      var viewNames = [&quot;Атлас / обзор&quot;, &quot;Теория / передача&quot;, &quot;Конструкция / слои&quot;, &quot;Материалы / границы&quot;, &quot;Лаборатория / протокол&quot;];
+      var mobileNames = [&quot;Атлас&quot;, &quot;Теория&quot;, &quot;Конструкция&quot;, &quot;Материалы&quot;, &quot;Лаборатория&quot;];
+
+      function pad(value) {
+        return String(value).padStart(2, &quot;0&quot;);
+      }
+
+      function setView(index) {
+        activeView = Math.max(0, Math.min(slides.length - 1, Number(index)));
+        root.setAttribute(&quot;data-view&quot;, String(activeView));
+        slides.forEach(function (slide, i) {
+          var selected = i === activeView;
+          slide.classList.toggle(&quot;is-active&quot;, selected);
+          slide.setAttribute(&quot;aria-hidden&quot;, selected ? &quot;false&quot; : &quot;true&quot;);
+        });
+        viewButtons.forEach(function (button) {
+          button.setAttribute(&quot;aria-pressed&quot;, Number(button.getAttribute(&quot;data-atlas-view&quot;)) === activeView ? &quot;true&quot; : &quot;false&quot;);
+        });
+        prev.disabled = activeView === 0;
+        next.disabled = activeView === slides.length - 1;
+        page.textContent = pad(activeView + 1) + &quot; / &quot; + pad(slides.length);
+        footerTitle.textContent = viewNames[activeView];
+        mobileChapter.textContent = pad(activeView + 1) + &quot; / &quot; + mobileNames[activeView];
+        progress.style.setProperty(&quot;--progress&quot;, (((activeView + 1) / slides.length) * 100) + &quot;%&quot;);
+      }
+
+      viewButtons.forEach(function (button) {
+        button.addEventListener(&quot;click&quot;, function () {
+          setView(button.getAttribute(&quot;data-atlas-view&quot;));
+        });
+      });
+      prev.addEventListener(&quot;click&quot;, function () { setView(activeView - 1); });
+      next.addEventListener(&quot;click&quot;, function () { setView(activeView + 1); });
+      root.addEventListener(&quot;keydown&quot;, function (event) {
+        if (event.key === &quot;ArrowLeft&quot;) setView(activeView - 1);
+        if (event.key === &quot;ArrowRight&quot;) setView(activeView + 1);
+      });
+
+      var theoryData = [
+        [&quot;Воздушная волна&quot;, &quot;Звуковая энергия — периодические колебания воздуха. Волна подходит к твёрдой границе и передаёт ей импульс.&quot;],
+        [&quot;Микровибрация перегородки&quot;, &quot;Стена не абсолютно жёсткая: под действием звука она начинает колебаться, хотя это движение не видно глазом.&quot;],
+        [&quot;Переизлучение&quot;, &quot;Обратная сторона перегородки работает как большая мембрана динамика и снова возбуждает воздух соседнего помещения.&quot;],
+        [&quot;Повышенный импеданс&quot;, &quot;Мягкая вязкая прослойка усложняет контакт стены с воздухом и рассеивает часть энергии внутри волокон.&quot;]
+      ];
+      var theoryButtons = Array.prototype.slice.call(root.querySelectorAll(&quot;[data-theory-step]&quot;));
+      var theoryLab = root.querySelector(&quot;.atlas-wave-lab&quot;);
+      var theoryTitle = root.querySelector(&quot;#atlas-theory-title&quot;);
+      var theoryCopy = root.querySelector(&quot;#atlas-theory-copy&quot;);
+      theoryButtons.forEach(function (button) {
+        button.addEventListener(&quot;click&quot;, function () {
+          var index = Number(button.getAttribute(&quot;data-theory-step&quot;));
+          theoryButtons.forEach(function (item, i) { item.setAttribute(&quot;aria-pressed&quot;, i === index ? &quot;true&quot; : &quot;false&quot;); });
+          theoryLab.setAttribute(&quot;data-step&quot;, String(index));
+          theoryTitle.textContent = theoryData[index][0];
+          theoryCopy.textContent = theoryData[index][1];
+        });
+      });
+
+      var layerButtons = Array.prototype.slice.call(root.querySelectorAll(&quot;[data-layer-focus]&quot;));
+      var exploded = root.querySelector(&quot;#atlas-exploded-svg&quot;);
+      layerButtons.forEach(function (button) {
+        button.addEventListener(&quot;click&quot;, function () {
+          var focus = button.getAttribute(&quot;data-layer-focus&quot;);
+          exploded.setAttribute(&quot;data-focus&quot;, focus);
+          layerButtons.forEach(function (item) { item.setAttribute(&quot;aria-pressed&quot;, item === button ? &quot;true&quot; : &quot;false&quot;); });
+        });
+      });
+
+      setView(0);
+    })();
+  &lt;/script&gt;
+
+  &lt;script type=&quot;module&quot;&gt;
+    import * as THREE from &quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.module.min.js&quot;;
+
+    const root = document.getElementById(&quot;acoustic-atlas&quot;);
+    const canvas = root ? root.querySelector(&quot;#atlas-3d&quot;) : null;
+    const wrap = root ? root.querySelector(&quot;#atlas-model-wrap&quot;) : null;
+    const explode = root ? root.querySelector(&quot;#atlas-explode&quot;) : null;
+
+    if (root &amp;&amp; canvas &amp;&amp; wrap &amp;&amp; explode) {
+      const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
+      camera.position.set(8.2, 4.4, 7.2);
+      camera.lookAt(0, 0, 0);
+
+      const assembly = new THREE.Group();
+      assembly.rotation.set(-0.08, 0.46, 0.02);
+      scene.add(assembly);
+
+      scene.add(new THREE.HemisphereLight(0xfffbec, 0x665b45, 2.2));
+      const key = new THREE.DirectionalLight(0xffffff, 3.2);
+      key.position.set(5, 8, 6);
+      key.castShadow = true;
+      scene.add(key);
+      const rim = new THREE.DirectionalLight(0xb79b62, 1.35);
+      rim.position.set(-5, 2, -6);
+      scene.add(rim);
+
+      const woolCanvas = document.createElement(&quot;canvas&quot;);
+      woolCanvas.width = 128;
+      woolCanvas.height = 128;
+      const woolContext = woolCanvas.getContext(&quot;2d&quot;);
+      woolContext.fillStyle = &quot;#b59a64&quot;;
+      woolContext.fillRect(0, 0, 128, 128);
+      for (let i = 0; i &lt; 900; i += 1) {
+        const lightness = 95 + Math.floor(Math.random() * 90);
+        woolContext.fillStyle = &quot;rgba(&quot; + lightness + &quot;,&quot; + (lightness - 24) + &quot;,&quot; + (lightness - 62) + &quot;,.34)&quot;;
+        woolContext.fillRect(Math.random() * 128, Math.random() * 128, 1 + Math.random() * 4, 1 + Math.random() * 2);
+      }
+      const woolTexture = new THREE.CanvasTexture(woolCanvas);
+      woolTexture.colorSpace = THREE.SRGBColorSpace;
+
+      const fabricCanvas = document.createElement(&quot;canvas&quot;);
+      fabricCanvas.width = 64;
+      fabricCanvas.height = 64;
+      const fabricContext = fabricCanvas.getContext(&quot;2d&quot;);
+      fabricContext.fillStyle = &quot;#ded8ca&quot;;
+      fabricContext.fillRect(0, 0, 64, 64);
+      fabricContext.strokeStyle = &quot;rgba(55,61,52,.16)&quot;;
+      fabricContext.lineWidth = 1;
+      for (let i = 0; i &lt; 64; i += 3) {
+        fabricContext.beginPath();
+        fabricContext.moveTo(i, 0);
+        fabricContext.lineTo(i, 64);
+        fabricContext.stroke();
+        fabricContext.beginPath();
+        fabricContext.moveTo(0, i);
+        fabricContext.lineTo(64, i);
+        fabricContext.stroke();
+      }
+      const fabricTexture = new THREE.CanvasTexture(fabricCanvas);
+      fabricTexture.colorSpace = THREE.SRGBColorSpace;
+
+      const layerMeshes = [];
+      const layerSpecs = [
+        { name: &quot;board-back&quot;, thickness: 0.14, color: 0xd7d0bf, roughness: 0.92 },
+        { name: &quot;membrane&quot;, thickness: 0.08, color: 0x34352f, roughness: 0.72 },
+        { name: &quot;wool&quot;, thickness: 0.34, color: 0xb59a64, roughness: 1, map: woolTexture },
+        { name: &quot;felt&quot;, thickness: 0.12, color: 0x676255, roughness: 0.96 },
+        { name: &quot;fabric&quot;, thickness: 0.08, color: 0xded8ca, roughness: 0.92, map: fabricTexture },
+        { name: &quot;board-front&quot;, thickness: 0.14, color: 0xe7e1d4, roughness: 0.88 }
+      ];
+
+      layerSpecs.forEach(function (spec, index) {
+        const geometry = new THREE.BoxGeometry(spec.thickness, 4.3, 3.15);
+        const material = new THREE.MeshStandardMaterial({
+          color: spec.color,
+          roughness: spec.roughness,
+          metalness: 0.02,
+          map: spec.map || null
+        });
+        const mesh = new THREE.Mesh(geometry, material);
+        mesh.castShadow = true;
+        mesh.receiveShadow = true;
+        mesh.userData.layerIndex = index;
+        mesh.userData.name = spec.name;
+        assembly.add(mesh);
+        layerMeshes.push(mesh);
+
+        const edges = new THREE.LineSegments(
+          new THREE.EdgesGeometry(geometry),
+          new THREE.LineBasicMaterial({ color: 0x244637, transparent: true, opacity: 0.42 })
+        );
+        mesh.add(edges);
+      });
+
+      const frameMaterial = new THREE.MeshStandardMaterial({ color: 0x81745c, roughness: 0.38, metalness: 0.72 });
+      const frame = new THREE.Group();
+      const addStud = function (height, width, depth, y, z) {
+        const stud = new THREE.Mesh(new THREE.BoxGeometry(width, height, depth), frameMaterial);
+        stud.position.set(0, y, z);
+        stud.castShadow = true;
+        frame.add(stud);
+      };
+      addStud(4.3, 0.12, 0.12, 0, -1.47);
+      addStud(4.3, 0.12, 0.12, 0, 0);
+      addStud(4.3, 0.12, 0.12, 0, 1.47);
+      addStud(0.12, 0.12, 3.04, 2.08, 0);
+      addStud(0.12, 0.12, 3.04, -2.08, 0);
+      frame.userData.layerIndex = 2;
+      assembly.add(frame);
+
+      const ground = new THREE.Mesh(
+        new THREE.PlaneGeometry(18, 18),
+        new THREE.ShadowMaterial({ color: 0x5d523c, transparent: true, opacity: 0.18 })
+      );
+      ground.rotation.x = -Math.PI / 2;
+      ground.position.y = -2.22;
+      ground.receiveShadow = true;
+      scene.add(ground);
+
+      function updateExplosion() {
+        const amount = Number(explode.value) / 100;
+        const gap = 0.34 + amount * 1.12;
+        const center = (layerMeshes.length - 1) / 2;
+        layerMeshes.forEach(function (mesh, index) {
+          mesh.position.x = (index - center) * gap;
+        });
+        frame.position.x = (2 - center) * gap + 0.06;
+        render();
+      }
+
+      function resize() {
+        const rect = canvas.getBoundingClientRect();
+        const width = Math.max(1, Math.round(rect.width));
+        const height = Math.max(1, Math.round(rect.height));
+        renderer.setSize(width, height, false);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+        render();
+      }
+
+      function render() {
+        renderer.render(scene, camera);
+      }
+
+      let dragging = false;
+      let lastX = 0;
+      let lastY = 0;
+      canvas.addEventListener(&quot;pointerdown&quot;, function (event) {
+        dragging = true;
+        lastX = event.clientX;
+        lastY = event.clientY;
+        canvas.setPointerCapture(event.pointerId);
+      });
+      canvas.addEventListener(&quot;pointermove&quot;, function (event) {
+        if (!dragging) return;
+        const dx = event.clientX - lastX;
+        const dy = event.clientY - lastY;
+        assembly.rotation.y += dx * 0.008;
+        assembly.rotation.x = Math.max(-0.48, Math.min(0.34, assembly.rotation.x + dy * 0.005));
+        lastX = event.clientX;
+        lastY = event.clientY;
+        render();
+      });
+      canvas.addEventListener(&quot;pointerup&quot;, function (event) {
+        dragging = false;
+        canvas.releasePointerCapture(event.pointerId);
+      });
+      canvas.addEventListener(&quot;pointercancel&quot;, function () {
+        dragging = false;
+      });
+      explode.addEventListener(&quot;input&quot;, updateExplosion);
+
+      const observer = new ResizeObserver(resize);
+      observer.observe(canvas);
+      updateExplosion();
+      resize();
+      wrap.classList.add(&quot;model-ready&quot;);
+    }
+  &lt;/script&gt;
+&lt;/div&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handleLeave = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</body>
+</html>
